@@ -19,7 +19,3 @@ ORDER BY gross_income ASC; -- Or DESC for Descending
 
 
 
-
-
-
-
