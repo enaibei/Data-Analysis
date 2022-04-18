@@ -277,3 +277,7 @@ INSERT INTO customer_details VALUES
 SELECT *
 FROM customer_details
 
+
+
+
+
