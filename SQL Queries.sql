@@ -81,3 +81,5 @@ ON customer_details.Invoice = supermarket_sales.Invoice_ID
 WHERE Country = 'Kenya';
 -- The FULL OUTER JOIN returns all records when there is a match in left (table1) or right (table2) table records
 
+-- A SELF JOIN is a regular join, but the table is joined with itself
+
