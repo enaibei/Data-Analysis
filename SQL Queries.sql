@@ -54,5 +54,30 @@ FROM supermarket_sales
 -- selecting distinct values
 
 
+-- SQL JOINS
+SELECT *
+FROM customer_details
+INNER JOIN supermarket_sales
+ON customer_details.Invoice = supermarket_sales.Invoice_ID
+ORDER BY supermarket_sales.Country
+-- INNER JOIN selects records that have matching values in both tables
 
+SELECT customer_name
+FROM customer_details
+LEFT JOIN supermarket_sales
+ON customer_details.Invoice = supermarket_sales.Invoice_ID;
+-- The LEFT JOIN returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match
+
+SELECT *
+FROM customer_details
+RIGHT JOIN supermarket_sales
+ON customer_details.Invoice = supermarket_sales.Invoice_ID;
+-- The RIGHT JOIN returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match
+
+SELECT *
+FROM customer_details
+FULL OUTER JOIN supermarket_sales
+ON customer_details.Invoice = supermarket_sales.Invoice_ID
+WHERE Country = 'Kenya';
+-- The FULL OUTER JOIN returns all records when there is a match in left (table1) or right (table2) table records
 
